@@ -578,7 +578,8 @@ function spam_protection_pre($commentdata){
         case null:
             throw new Typecho_Widget_Exception(_t('请输入验证码'));
             break;
-        default:
+		default:
+		return '验证码错误，请重新输入';
             throw new Typecho_Widget_Exception(_t('验证码错误，请重新输入'));
     }
     return $commentdata;
