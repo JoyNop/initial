@@ -14,6 +14,12 @@
 <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>. Powered by <a href="#" target="_blank">Typecho</a> &amp; <a href="#" target="_blank">Initial</a>.</p>
 <?php if ($this->options->ICPbeian): ?>
 <p><a href="http://www.miitbeian.gov.cn" class="icpnum" target="_blank" rel="nofollow"><?php $this->options->ICPbeian(); ?></a></p>
+<div> <center>
+<a href=https://console.upyun.com/register/?invite=BJnvhrqF7">
+ <img src='https://www.joynop.com/upyun/upyun_logo5.png' alt='又拍云' width="80px"/>
+ </a>
+ </center>
+</div>
 <?php endif; ?>
 </div>
 </footer>
