@@ -554,3 +554,34 @@ function themeFields($layout) {
 	false, _t('文章目录'), _t('默认关闭，启用则会在文章内显示“文章目录”（若文章内无任何标题，则不显示目录）'));
 	$layout->addItem($catalog);
 }
+
+
+/**
+* 数学算术评论验证码
+*/
+function themeInit($comment){
+    if ($comment->is('single')) {
+        $comment = spam_protection_pre($comment);
+    }
+}
+function spam_protection_math(){
+    $num1=rand(0,9);
+    $num2=rand(0,9);
+    echo "<label for=\"math\">请输入 <i>$num1 + $num2 = ?</i> 的计算结果：</label>\n";
+    echo "<input type=\"text\" name=\"sum\" class=\"text\" value=\"\" size=\"25\" tabindex=\"4\">\n";
+    echo "<input type=\"hidden\" name=\"num1\" value=\"$num1\">\n";
+    echo "<input type=\"hidden\" name=\"num2\" value=\"$num2\">";
+}
+function spam_protection_pre($commentdata){
+    $sum=$_POST['sum'];
+    switch($sum){
+        case $_POST['num1']+$_POST['num2']:
+            break;
+        case null:
+            throw new Typecho_Widget_Exception(_t('请输入验证码'));
+            break;
+        default:
+            throw new Typecho_Widget_Exception(_t('验证码错误，请重新输入'));
+    }
+    return $commentdata;
+}
