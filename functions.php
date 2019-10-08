@@ -566,7 +566,7 @@ function spam_protection_math(){
     $num1=rand(0,9);
     $num2=rand(0,9);
     echo "<label for=\"math\">请输入 <i>$num1 + $num2 = ?</i> 的计算结果：</label>\n";
-    echo "<input type=\"text\" name=\"sum\" class=\"text\" value=\"\" size=\"25\" tabindex=\"4\">\n";
+    echo "<input required type=\"text\" name=\"sum\" class=\"text\" value=\"\" size=\"25\" tabindex=\"4\">\n";
     echo "<input type=\"hidden\" name=\"num1\" value=\"$num1\">\n";
     echo "<input type=\"hidden\" name=\"num2\" value=\"$num2\">";
 }
