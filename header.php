@@ -51,6 +51,8 @@
         if(success){
             var verifyId=result.verifyId;
             //TODO 将verifyId提交到应用服务器请求二次验证
+            console.log(verifyId);
+            
         }
     });
 <script>
