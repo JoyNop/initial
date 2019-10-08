@@ -4,9 +4,9 @@
  * 还原本质 勿忘初心
  * 
  * @package Initial
- * @author JIElive
+ * @author JoyNop
  * @version 2.4.3
- * @link http://www.offodd.com/
+ * @link http://www.joynop.com/
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php');
