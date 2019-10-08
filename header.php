@@ -38,6 +38,22 @@
 <?php endif; ?>
 </div>
 <script src="https://s.verify5.com/assets/latest/v5.js" type="text/javascript"></script>
+<script>
+    var v5=new com.strato.Verify5({
+        host:"freetvks2vi2.verify5.com",//从后台getToken接口获得
+        token:"89f7ccee51f1459c976ba33245775cd8 "//从后台getToken接口获得
+    };
+    v5.on("CANCEL",function(){
+        //当用户取消验证时触发
+    });
+    v5.verify(function(result){
+        var success=result.success;
+        if(success){
+            var verifyId=result.verifyId;
+            //TODO 将verifyId提交到应用服务器请求二次验证
+        }
+    });
+<script>
 <script>function Navswith(){document.getElementById("header").classList.toggle("on")}</script>
 <button id="nav-swith" onclick="Navswith()"><span></span></button>
 <div id="nav">
