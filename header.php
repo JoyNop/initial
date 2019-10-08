@@ -37,6 +37,7 @@
 </h1>
 <?php endif; ?>
 </div>
+<script src="https://s.verify5.com/assets/latest/v5.js" type="text/javascript"></script>
 <script>function Navswith(){document.getElementById("header").classList.toggle("on")}</script>
 <button id="nav-swith" onclick="Navswith()"><span></span></button>
 <div id="nav">
