@@ -72,7 +72,7 @@ echo $commentClass;
 <input type="text" name="author" id="author" class="text" placeholder="称呼 *" value="<?php $this->remember('author'); ?>" required />
 <input type="email" name="mail" id="mail" class="text" placeholder="邮箱<?php if ($this->options->commentsRequireMail): ?> *<?php endif; ?>" value="<?php $this->remember('mail'); ?>"<?php if ($this->options->commentsRequireMail): ?> required<?php endif; ?> />
 <input type="url" name="url" id="url" class="text" placeholder="http://<?php if ($this->options->commentsRequireURL): ?> *<?php endif; ?>" value="<?php $this->remember('url'); ?>"<?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?> />
-<div><?php echo rand();?></div>
+<div id="randText"><?php echo rand();?><input type="text" name="checkRandText" id="checkRandText" class="text" placeholder="请输入验证码 *" value="<?php $this->remember('checkRandText'); ?>" required /></div>
 <?php endif; ?>
 <button type="submit" class="submit">提交评论</button>
 </p>
