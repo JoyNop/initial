@@ -37,7 +37,6 @@
 </h1>
 <?php endif; ?>
 </div> 
-<script>
 <script>function Navswith(){document.getElementById("header").classList.toggle("on")}</script>
 <button id="nav-swith" onclick="Navswith()"><span></span></button>
 <div id="nav">
