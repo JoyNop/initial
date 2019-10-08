@@ -165,9 +165,9 @@ function themeInit($archive) {
 	}
 	if ($archive->is('single')) {
 		$archive = spam_protection_pre($comment);
-		$archive->content = hrefOpen($archive->content);
 		if ($options->AttUrlReplace) {
 			$archive->content = UrlReplace($archive->content);
+			$archive->content = hrefOpen($archive->content);
 		}
 		if ($archive->fields->catalog) {
 			$archive->content = createCatalog($archive->content);
