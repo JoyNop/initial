@@ -154,6 +154,7 @@ function themeConfig($form) {
 	$CustomContent = new Typecho_Widget_Helper_Form_Element_Textarea('CustomContent', NULL, NULL, _t('底部自定义内容'), _t('位于底部，footer之后body之前，适合放置一些JS内容，如网站统计代码等（若开启全站Pjax，目前支持Google和百度统计的回调，其余统计代码可能会不准确）'));
 	$form->addInput($CustomContent);
 }
+ 
 
 function themeInit($archive) {
 	$options = Helper::options();
@@ -163,6 +164,7 @@ function themeInit($archive) {
 		$options->commentsPageDisplay = 'first';
 	}
 	if ($archive->is('single')) {
+		$archive = spam_protection_pre($comment);
 		$archive->content = hrefOpen($archive->content);
 		if ($options->AttUrlReplace) {
 			$archive->content = UrlReplace($archive->content);
@@ -559,11 +561,7 @@ function themeFields($layout) {
 /**
 * 数学算术评论验证码
 */
-function themeInit($comment){
-    if ($comment->is('single')) {
-        $comment = spam_protection_pre($comment);
-    }
-}
+
 function spam_protection_math(){
     $num1=rand(0,9);
     $num2=rand(0,9);
