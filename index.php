@@ -1,9 +1,9 @@
 <?php
 /**
- * Initial - 简约而不简单
+ * Joy-Initial - 简约而不简单
  * 还原本质 勿忘初心
  * 
- * @package Initial
+ * @package Joy-Initial
  * @author JoyNop
  * @version 2.4.3
  * @link http://www.joynop.com/
